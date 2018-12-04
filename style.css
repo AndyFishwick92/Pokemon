@@ -1,0 +1,158 @@
+@font-face{
+font-family: pokemon;
+src: url(pokemon.ttf) format('truetype');
+}
+
+html, body {
+  width:100%; 
+  height:100%; 
+  margin:0;
+  padding:0;
+  font-family: pokemon, Calibri;
+  font-size: 8px;
+}
+
+#canvas {
+  background: url(grass.png);
+}
+
+#weatherCanvas {
+  position: absolute;
+  left: 50%;
+  margin-left: -250px;
+  pointer-events: none;
+}
+
+p {
+  padding: 2px 0;
+  margin: 0;
+}
+
+canvas,
+#controls,
+#towers,
+#levels,
+#scores,
+.tower {
+  float: left;
+}
+
+#game {
+  width: 500px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.border {
+  border: 8px solid black;
+  border-image: url(border.png) 8 8 8 8 repeat;
+  -o-border-image: url(border.png) 8 8 8 8 repeat;
+  -webkit-border-image: url(border.png) 8 8 8 8 repeat;
+  -moz-border-image: url(border.png) 8 8 8 8 repeat;
+  margin: 0 4px;
+}
+
+.border p {
+  padding-left: 7px;
+}
+
+.border p:hover {
+  background: url(arrow.png) no-repeat;
+  background-position: 0 3px;
+  cursor: default;
+}
+
+#output {
+  float: left;
+  width: 500px;
+  text-align: center;
+  color: red;
+  padding: 3px;
+}
+
+#controls {
+  width: 90px;
+}
+
+#scores {
+  width: 110px;
+}
+
+#scores span,
+.price {
+  float: right;
+  margin-right: 5px;
+}
+
+#towers {
+  width: 130px;
+}
+
+.tower {
+  width: 122px;
+}
+
+#levels {
+  width: 72px;
+}
+
+#gameOver {
+  position: absolute;
+  width: 278px;
+  top: 200px;
+  left: 50%;
+  padding: 15px;
+  margin-left: -154px;
+  background: #fff;
+  display: none;
+}
+
+#weatherChoice,
+#soundChoice {
+  display: none;
+}
+
+#weatherChoice:checked + label[for="weatherChoice"],
+#soundChoice:checked + label[for="soundChoice"]{
+  color: green;
+  text-decoration: underline;
+}
+
+footer {
+  width: 500px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 16px;
+  }
+
+  #controls,
+  #levels  {
+    width: 484px;
+    text-align: center;
+  }
+  
+  #towers  {
+    width: 232px;
+  }
+  
+  #scores {
+    margin-right: 4px;
+    width: 232px;
+  }
+  
+  .border {
+    margin: 0px;
+  }
+  
+  .tower {
+    width: 230px;
+  }
+  
+  .level {
+    width: 111px;
+    float: left;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=500, user-scalable=no">
+</head>
+<body>
+  <div id="game">
+    <canvas width="500" height="500" id="canvas">Your browser doesn't support canvas. If it did you would see an awesome canvas game here</canvas>
+    <canvas width="500" height="500" id="weatherCanvas"></canvas>
+    <div id="output"></div>
+    
+      <div id="controls" class="border">
+        <p id="play">PLAY</p>
+        <p><input type="checkbox" id="weatherChoice"/><label for="weatherChoice">WEATHER</label></p>
+        <p id="background">BACKGROUND</p>
+        <p id="sounds"><input type="checkbox" id="soundChoice"/><label for="soundChoice">SOUNDS</label></p>
+      </div>
+      
+      <div id="scores" class="border">      
+        <p>SCORE<span id="score">0</span></p>
+        <p>GOLD<span id="gold">500</span></p>
+        <p>LIVES<span id="lives">100</span></p>
+        <p>WAVE<span id="wave">1</span></p>
+      </div>
+
+      <div id="towers" class="border">
+        <p id="pikachu" class="tower" draggable="true">PIKACHU<span class="price">100</span></p>
+        <p id="squirtle" class="tower" draggable="true">SQUIRTLE<span class="price">50</span></p>
+        <p id="bulbasaur" class="tower" draggable="true">BULBASAUR<span class="price">50</span></p>
+        <p id="charmander" class="tower" draggable="true">CHARMANDER<span class="price">50</span></p>
+      </div>
+      
+      <div id="levels" class="border">
+        <p class="level" id="lvl0">Level 1</p>
+        <p class="level" id="lvl1">Level 2</p>
+        <p class="level" id="lvl2">Level 3</p>
+        <p class="level" id="lvl3">Level 4</p>
+      </div>
+    
+    <div id="gameOver" class="border">
+      <h2>You ran out of lives!</h2>
+      <div>Final Score: <span id="finalscore">0</span></div>
+      <div>Click anywhere to reset</div>
+    </div>
+    
+  </div>
+  
+  <footer>  
+    <!-- For all Audio, .ogg and flash fallbacks would be preferable
+         But I don't have access to them-->
+    <audio id="loselife">
+      <source src="sounds/loselife.wav" type="audio/wav">
+    </audio>
+    <audio id="sell">
+      <source src="sounds/sell.wav" type="audio/wav">
+    </audio>
+    <audio id="upgrade">
+      <source src="sounds/upgrade.wav" type="audio/wav">
+    </audio>
+    <audio id="pikachuSound">
+      <source src="sounds/pikachu.wav" type="audio/wav">
+    </audio>
+    <audio id="squirtleSound">
+      <source src="sounds/squirtle.wav" type="audio/wav">
+    </audio>
+    <audio id="bulbasaurSound">
+      <source src="sounds/bulbasaur.wav" type="audio/wav">
+    </audio>
+    <audio id="charmanderSound">
+      <source src="sounds/charmander.wav" type="audio/wav">
+    </audio>
+    <audio id="waveOver">
+      <source src="sounds/winner.mp3" type="audio/mp3">
+    </audio>
+    <audio id="theme" loop>
+      <source src="sounds/theme.mp3" type="audio/mp3">
+    </audio>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
